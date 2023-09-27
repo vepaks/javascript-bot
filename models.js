@@ -1,18 +1,21 @@
-import mongoose from "mongoose";
+//  модел на базата данна
 
+const mongoose = require ("mongoose");
 
-const CountSchema = new mongoose.Schema({
-    name: {
-        type: String,
+const UserSchema = new mongoose.Schema({
+    chatId: {
+        type: String
     },
-    wins: {
+    wrong: {
         type: Number,
+        defaultValue: 0
     },
-    loose: {
+        right: {
         type: Number,
-    }
+        defaultValue: 0
+    },
 })
 
-const Cunt = mongoose.model('Animal', CountSchema);
+const User = mongoose.model('User', UserSchema);
 
-module.exports = Cunt;
+module.exports = User;

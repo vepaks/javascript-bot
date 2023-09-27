@@ -1,3 +1,5 @@
+//  извеждаме настройките за бутоните и подновяване на играта
+
 module.exports = {
     gameOptions: {
         reply_markup: JSON.stringify({
